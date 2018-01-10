@@ -1,0 +1,19 @@
+<!-- begin topic-slider -->
+<div class="topic">
+	<div class="topic-slider js-topic-slider">
+		{% for i in [1,2,3,4,5] -%}
+			<div class="topic-slider__slide" style="background-image: url(./img/topic-slider-bg.jpg);">
+				<div class="topic-slider__inner inner">
+					<h1 class="title-lg">{% if loop.first %}{% else %}{{ i }}{% endif %}Stop giving up. <br>You can do it. Do it!</h1>
+					<div class="topic-slider__footer">
+						<a href="#" class="btn btn-transparent">Learn more</a>
+					</div>
+				</div>
+			</div>
+		{%- endfor %}
+	</div>
+	<div class="topic__footer">
+		{{ mixins.icon('mouse') }}
+	</div>
+</div>
+<!-- end topic-slider -->

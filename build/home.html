@@ -13,10 +13,67 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p> <svg class="icon icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
-      <li>Item1</li>
-      <li>Item2</li>
+      <!-- begin header -->
+      <header class="header">
+        <div class="header__inner">
+          <!-- begin logo --><a href="/" class="header__logo logo">
+			<img src="./img/logo.svg" alt="logo">
+		</a>
+          <!-- end logo --><button class="header__btn btn-open-nav js-btn-open-nav"><span></span></button>
+          <!-- begin nav -->
+          <nav class="header__nav nav js-nav">
+            <ul class="nav__list">
+              <li class="nav__item is-active"> <a href="#" class="nav__link">HOME</a> </li>
+              <li class="nav__item"> <a href="#" class="nav__link">PRODUCTS</a> </li>
+              <li class="nav__item"> <a href="#" class="nav__link">SALES</a> </li>
+              <li class="nav__item"> <a href="#" class="nav__link">CUSTOMER</a> </li>
+              <li class="nav__item"> <a href="#" class="nav__link">SUPPORT</a> </li>
+              <li class="nav__item"> <a href="#" class="nav__link">NEWS</a> </li>
+              <li class="nav__item"> <a href="#" class="nav__link">CONTACT</a> </li>
+              <li class="nav__item"> <a href="#" class="nav__link">ABOUT SAR</a> </li>
+            </ul>
+          </nav>
+          <!-- end nav -->
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin topic-slider -->
+      <div class="topic">
+        <div class="topic-slider js-topic-slider">
+          <div class="topic-slider__slide" style="background-image: url(./img/topic-slider-bg.jpg);">
+            <div class="topic-slider__inner inner">
+              <h1 class="title-lg">Stop giving up. <br>You can do it. Do it!</h1>
+              <div class="topic-slider__footer"> <a href="#" class="btn btn-transparent">Learn more</a> </div>
+            </div>
+          </div>
+          <div class="topic-slider__slide" style="background-image: url(./img/topic-slider-bg.jpg);">
+            <div class="topic-slider__inner inner">
+              <h1 class="title-lg">2Stop giving up. <br>You can do it. Do it!</h1>
+              <div class="topic-slider__footer"> <a href="#" class="btn btn-transparent">Learn more</a> </div>
+            </div>
+          </div>
+          <div class="topic-slider__slide" style="background-image: url(./img/topic-slider-bg.jpg);">
+            <div class="topic-slider__inner inner">
+              <h1 class="title-lg">3Stop giving up. <br>You can do it. Do it!</h1>
+              <div class="topic-slider__footer"> <a href="#" class="btn btn-transparent">Learn more</a> </div>
+            </div>
+          </div>
+          <div class="topic-slider__slide" style="background-image: url(./img/topic-slider-bg.jpg);">
+            <div class="topic-slider__inner inner">
+              <h1 class="title-lg">4Stop giving up. <br>You can do it. Do it!</h1>
+              <div class="topic-slider__footer"> <a href="#" class="btn btn-transparent">Learn more</a> </div>
+            </div>
+          </div>
+          <div class="topic-slider__slide" style="background-image: url(./img/topic-slider-bg.jpg);">
+            <div class="topic-slider__inner inner">
+              <h1 class="title-lg">5Stop giving up. <br>You can do it. Do it!</h1>
+              <div class="topic-slider__footer"> <a href="#" class="btn btn-transparent">Learn more</a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="topic__footer"> <svg class="icon icon-mouse"><use xlink:href="img/sprite.svg#icon-mouse"></use></svg> </div>
+      </div>
+      <!-- end topic-slider -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

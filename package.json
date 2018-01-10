@@ -8,7 +8,7 @@
     "lint": "eslint --ignore-pattern 'src/js/lib/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
     "lint-fix": "npm run lint -- --fix"
   },
-  "authors": "Coderiver <html@coderiver.com.ua>",
+  "authors": "valeriiderevshchykov@gmail.com, wh2ts0n9057@gmail.com",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "browser-sync": "^2.10.0",
@@ -37,7 +37,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
     "require-dir": "^0.3.2",
-    "gulp-consolidate": "^0.2.0",
+    "gulp-consolidate": "^0.1.2",
     "gulp-include": "^2.0.3",
     "run-sequence": "^1.1.5",
     "gulp-svgmin": "^1.2.0",
@@ -45,9 +45,6 @@
     "gulp-changed": "^1.3.0",
     "gulp-svgstore": "^5.0.5",
     "through2": "^2.0.1",
-    "gulp-consolidate": "^0.1.2",
-    "gulp-svgmin": "^1.2.0",
-    "gulp-changed": "^1.3.0",
     "gulp-front-matter": "^1.3.0",
     "gulp-prettify": "^0.4.0",
     "gulp-nunjucks-render": "^2.0.0",
@@ -61,5 +58,9 @@
     "babel-runtime": "^5.0.0",
     "require-yaml": "^0.0.1",
     "lodash": "^4.3.0"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9"
   }
 }

@@ -1,0 +1,57 @@
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 10
+	height: 166px
+	&__inner
+		padding: 0 32px
+		max-width: 1600px
+	&__logo
+		float: left
+		margin: 20px 0 0 156px
+	&__btn
+		float: right
+		display: none
+	&__nav
+		float: right
+		margin-top: 110px
+
+.logo
+	vertical-align: top
+	display: inline-block
+	img
+		display: block
+
+.nav
+	font-weight: 400 
+	&__item
+		vertical-align: top
+		display: inline-block
+		&:not(:first-child)
+			margin-left: 39px
+	&__link
+		position: relative
+		line-height: 1
+		color: $white 
+		padding-bottom: 15px
+		display: block
+		.is-active &
+			font-weight: 700 
+			&:before
+				transform: scaleX(1)
+		+hover
+			&:before
+				transform: scaleX(1)
+		&:before
+			position: absolute
+			content: "" 
+			left: 0
+			right: 0
+			bottom: 0
+			height: 2px
+			transition: transform .2s ease-in-out
+			transform: scaleX(0)
+			border-radius: 2px 
+			background-color: $radicalRed 

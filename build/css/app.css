@@ -196,6 +196,10 @@ input, button {
   border: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 div, input, textarea, select, button,
 h1, h2, h3, h4, h5, h6, a, span, a:focus {
   outline: none;
@@ -222,33 +226,110 @@ html {
 .icon-facebook {
   width: 0.53em;
   height: 1em;
-  fill: #000;
+  fill: currentColor;
+}
+
+.icon-mouse {
+  width: 0.67em;
+  height: 1em;
+  fill: currentColor;
 }
 
 body {
-  background: #FFF;
-  font-size: 50px;
-  font-size: calc(16px + (50 - 16) * ((100vw - 600px) / (1000 - 600)));
-  line-height: 1.4;
+  font-family: "Roboto Condensed";
+  font-size: 18;
+  font-weight: 300;
+  line-height: 1.33;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
 }
 
-.block {
-  display: -ms-flexbox;
-  display: flex;
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 166px;
 }
 
-@media (min-width: 1000px) {
-
-  body {
-    font-size: 50px;
-  }
+.header__inner {
+  padding: 0 32px;
+  max-width: 1600px;
 }
 
-@media (max-width: 600px) {
+.header__logo {
+  float: left;
+  margin: 20px 0 0 156px;
+}
 
-  body {
-    font-size: 16px;
-  }
+.header__btn {
+  float: right;
+  display: none;
+}
+
+.header__nav {
+  float: right;
+  margin-top: 110px;
+}
+
+.logo {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.logo img {
+  display: block;
+}
+
+.nav {
+  font-weight: 400;
+}
+
+.nav__item {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 39px;
+}
+
+.nav__link {
+  position: relative;
+  line-height: 1;
+  color: #fff;
+  padding-bottom: 15px;
+  display: block;
+}
+
+.is-active .nav__link {
+  font-weight: 700;
+}
+
+.is-active .nav__link:before {
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.no-touch .nav__link:hover:before {
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nav__link:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  transition: transform .2s ease-in-out;
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  border-radius: 2px;
+  background-color: #F92251;
 }
 
 @media (prefers-reduced-motion: reduce) {

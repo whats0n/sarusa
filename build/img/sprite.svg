@@ -3,4 +3,19 @@
         facebook
     </title>
     <path d="M9.766.157v2.946H8.014c-.64 0-1.071.134-1.295.402-.223.268-.335.67-.335 1.205v2.11h3.27l-.435 3.303H6.384v8.471H2.97v-8.47H.123V6.82H2.97V4.387c0-1.384.387-2.457 1.161-3.22C4.904.404 5.934.023 7.222.023c1.093 0 1.941.045 2.544.134z" fill-rule="evenodd"/>
+</symbol><symbol id="icon-mouse" viewBox="0 0 24 36">
+    <style>
+        .st0{opacity:.7}.st1{fill:#fff}.st2{fill:#d8d8d8}
+    </style>
+    <title>
+        Scroll
+    </title>
+    <g id="Home-page" transform="translate(-798 -915)" class="st0">
+        <g id="PROMO" transform="translate(0 -5)">
+            <g id="Scroll-" transform="translate(798 920)">
+                <path class="st1" d="M12 35.4C5.5 35.4.2 30.1.2 23.6V12.4C.2 5.9 5.5.6 12 .6s11.8 5.3 11.8 11.8v11.3c0 6.4-5.3 11.7-11.8 11.7zm0-32.8c-5.4 0-9.8 4.4-9.8 9.8v11.3c0 5.4 4.4 9.8 9.8 9.8s9.8-4.4 9.8-9.8V12.4c0-5.4-4.4-9.8-9.8-9.8z" id="Rectangle-4"/>
+                <path class="st2" d="M12 14c1.5 0 2.7-1.2 2.7-2.7S13.5 8.6 12 8.6s-2.7 1.2-2.7 2.7S10.5 14 12 14z" id="Oval-2"/>
+            </g>
+        </g>
+    </g>
 </symbol></svg>

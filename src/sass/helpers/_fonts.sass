@@ -1,0 +1,101 @@
+//FONTS
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1), url("../fonts/" + $file + ".woff2") format("woff2"), url("../fonts/" + $file + ".woff") format("woff")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+//START ROBOTO
+//light
+@font-face
+	+fontdefault(normal, 300, 'Roboto')
+	+fontpath('Roboto Light', 'Roboto-Light', roboto-light)
+@font-face
+	+fontdefault(italic, 300, 'Roboto')
+	+fontpath('Roboto Light Italic', 'Roboto-LightItalic', roboto-lightitalic)
+//regular
+@font-face
+	+fontdefault(normal, 400, 'Roboto')
+	+fontpath('Roboto Regular', 'Roboto-Regular', roboto-regular)
+@font-face
+	+fontdefault(italic, 400, 'Roboto')
+	+fontpath('Roboto Italic', 'Roboto-Italic', roboto-italic)
+//medium
+@font-face
+	+fontdefault(normal, 500, 'Roboto')
+	+fontpath('Roboto Medium', 'Roboto-Medium', roboto-medium)
+@font-face
+	+fontdefault(italic, 500, 'Roboto')
+	+fontpath('Roboto MediumItalic', 'Roboto-MediumItalic', roboto-mediumitalic)
+//bold
+@font-face
+	+fontdefault(normal, 700, 'Roboto')
+	+fontpath('Roboto Bold', 'Roboto-Bold', roboto-bold)
+@font-face
+	+fontdefault(italic, 700, 'Roboto')
+	+fontpath('Roboto Bold Italic', 'Roboto-BoldItalic', roboto-bolditalic)
+//END ROBOTO
+
+//START ROBOTO CONDENSED
+//light
+@font-face
+	+fontdefault(normal, 300, 'Roboto Condensed')
+	+fontpath('Roboto Condensed Regular', 'RobotoCondensed-Regular', robotocondensed-light)
+@font-face
+	+fontdefault(italic, 300, 'Roboto Condensed')
+	+fontpath('Roboto Condensed Italic', 'RobotoCondensed-Italic', robotocondensed-lightitalic)
+//regular
+@font-face
+	+fontdefault(normal, 400, 'Roboto Condensed')
+	+fontpath('Roboto Condensed Regular', 'RobotoCondensed-Regular', robotocondensed-regular)
+@font-face
+	+fontdefault(italic, 400, 'Roboto Condensed')
+	+fontpath('Roboto Condensed Italic', 'RobotoCondensed-Italic', robotocondensed-italic)
+//bold
+@font-face
+	+fontdefault(normal, 700, 'Roboto Condensed')
+	+fontpath('Roboto Condensed Bold', 'RobotoCondensed-Bold', robotocondensed-bold)
+@font-face
+	+fontdefault(italic, 700, 'Roboto Condensed')
+	+fontpath('Roboto Condensed Bold Italic', 'RobotoCondensed-BoldItalic', robotocondensed-bolditalic)
+//END ROBOTO CONDENSED
+
+//START MONTSERRAT
+//regular
+@font-face
+	+fontdefault(normal, 400, 'Montserrat')
+	+fontpath('Montserrat Regular', 'Montserrat-Regular', montserrat-regular)
+//bold
+@font-face
+	+fontdefault(normal, 700, 'Montserrat')
+	+fontpath('Montserrat Bold', 'Montserrat-Bold', montserrat-bold)
+//END MONTSERRAT
+
+//START OPEN SANS
+//regular
+@font-face
+	+fontdefault(normal, 400, 'Open Sans')
+	+fontpath('Open Sans Regular', 'OpenSans-Regular', opensans-regular)
+//bold
+@font-face
+	+fontdefault(normal, 700, 'Open Sans')
+	+fontpath('Open Sans Bold', 'OpenSans-Bold', opensans-bold)
+//END OPEN SANS
+
+//START KNOCKOUT
+//regular
+@font-face
+	+fontdefault(normal, 400, 'Knockout')
+	+fontpath('Knockout Regular', 'Knockout-Regular', Knockout)
+//END KNOCKOUT
+
+//START HELVETICA LT
+//regular
+@font-face
+	+fontdefault(normal, 400, 'HelveticaLT')
+	+fontpath('HelveticaLT', 'HelveticaLT-Regular', HelveticaLT)
+@font-face
+	+fontdefault(italic, 400, 'HelveticaLT')
+	+fontpath('HelveticaLT Italic', 'HelveticaLT-Italic', HelveticaLT-Oblique)
+//END HELVETICA LT

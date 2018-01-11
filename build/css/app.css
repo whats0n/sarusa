@@ -371,6 +371,89 @@ body {
   background-color: #F92251;
 }
 
+.sm-btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 18px 20px 20px;
+  border: 1px solid #fff;
+  width: 100%;
+  max-width: 224px;
+  color: #fff;
+  background: none;
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  line-height: 15px;
+  letter-spacing: 0.72px;
+  transition: color 0.25s, background 0.25s;
+}
+
+.no-touch .sm-btn:hover {
+  color: #000;
+  background: #fff;
+}
+
+.boxes {
+  position: relative;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.boxes__inner {
+  padding-top: 69px;
+  padding-bottom: 92px;
+}
+
+.boxes__row {
+  margin: 0 -16px;
+}
+
+.boxes__row:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.boxes__col {
+  float: left;
+  padding: 16px;
+  width: 50%;
+}
+
+.box {
+  padding: 32px 50px 42px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.box__title {
+  font-family: "Roboto Condensed";
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 79px;
+  letter-spacing: -0.38px;
+}
+
+.box__title:after {
+  content: '';
+  display: block;
+  margin: 18px auto 56px;
+  border-radius: 2px;
+  width: 66px;
+  height: 2px;
+  background: #F92251;
+}
+
+.box__content {
+  margin-bottom: 40px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0.49px;
+}
+
 .sm-social {
   max-width: 248px;
   width: 100%;
@@ -477,6 +560,14 @@ body {
   vertical-align: top;
 }
 
+.footer__nav a, .footer__subnav a {
+  transition: color 0.25s;
+}
+
+.no-touch .footer__nav a:hover, .no-touch .footer__subnav a:hover {
+  color: #F92251;
+}
+
 .footer__nav {
   float: left;
   padding: 41px 0 9px;
@@ -523,6 +614,19 @@ body {
 
 @media only screen and (max-width: 1260px) {
 
+  .box {
+    padding: 30px 20px 35px;
+  }
+
+  .box__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .box__title:after {
+    margin: 10px auto 30px;
+  }
+
   .footer__top {
     padding: 50px 0;
     text-align: center;
@@ -533,6 +637,10 @@ body {
     padding: 0 0 40px;
   }
 
+  .footer__subnav li:not(:last-child) {
+    padding-right: 60px;
+  }
+
   .footer__sm-social {
     float: none;
     margin: 0 auto;
@@ -540,6 +648,29 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+
+  .boxes__inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .boxes__col {
+    width: 100%;
+  }
+
+  .box {
+    padding: 30px 15px 35px;
+  }
+
+  .box__title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .box__content {
+    margin: 0 auto 40px;
+    max-width: 420px;
+  }
 
   .footer__nav li,
   .footer__nav a, .footer__subnav li,

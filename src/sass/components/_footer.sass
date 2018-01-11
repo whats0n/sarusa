@@ -1,0 +1,50 @@
+.footer
+	color: $white
+	background: $black
+	a
+		color: inherit
+	&__top,
+	&__bottom
+		+clr
+	&__top
+		padding-top: 58px
+		padding-bottom: 75px
+	&__bottom
+		padding-top: 29px
+		padding-bottom: 30px
+		border-top: 1px solid rgba($white, 0.1)
+	&__nav,
+	&__subnav
+		font-size: 0
+		li,
+		a 
+			display: inline-block
+			vertical-align: top
+	&__nav
+		float: left
+		padding-top: 41px
+		padding-bottom: 9px
+		li 
+			&:not(:last-child)
+				padding-right: 32px
+		a
+			font-family: $helvetica_neue
+			+f(12px, null, 14px)
+	&__subnav
+		padding-top: 23px
+		padding-bottom: 32px
+		float: right
+		li 
+			&:not(:last-child)
+				padding-right: 98px
+		a
+			font-family: $helvetica_lt
+			+f(11px, null, 12px)
+			letter-spacing: 2.2px
+	&__sm-social
+		float: right
+	&__logo
+		float: left
+		img 
+			display: block
+			width: 61px

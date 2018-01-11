@@ -7,8 +7,10 @@
 	&__bottom
 		+clr
 	&__top
-		padding-top: 58px
-		padding-bottom: 75px
+		padding: 58px 0 75px
+		+lg 
+			padding: 50px 0
+			text-align: center
 	&__bottom
 		padding-top: 29px
 		padding-bottom: 30px
@@ -20,31 +22,49 @@
 		a 
 			display: inline-block
 			vertical-align: top
+			+sm
+				display: block
+		a 
+			+sm 
+				padding: 6px 0
 	&__nav
 		float: left
-		padding-top: 41px
-		padding-bottom: 9px
+		padding: 41px 0 9px
+		+lg
+			float: none
+			padding: 0 0 40px
 		li 
 			&:not(:last-child)
 				padding-right: 32px
+				+sm
+					padding: 0
 		a
 			font-family: $helvetica_neue
 			+f(12px, null, 14px)
 	&__subnav
-		padding-top: 23px
-		padding-bottom: 32px
 		float: right
+		padding: 23px 0 32px
+		+sm 
+			float: left
+			padding: 0
 		li 
 			&:not(:last-child)
 				padding-right: 98px
+				+sm
+					padding: 0
 		a
 			font-family: $helvetica_lt
 			+f(11px, null, 12px)
 			letter-spacing: 2.2px
 	&__sm-social
 		float: right
+		+lg 
+			float: none
+			margin: 0 auto
 	&__logo
 		float: left
+		+sm 
+			float: right
 		img 
 			display: block
 			width: 61px

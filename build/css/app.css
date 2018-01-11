@@ -145,6 +145,13 @@
   src: local("HelveticaLT Italic"), local("HelveticaLT-Italic"), url("../fonts/HelveticaLT-Oblique.woff2") format("woff2"), url("../fonts/HelveticaLT-Oblique.woff") format("woff");
 }
 
+@font-face {
+  font-family: "HelveticaNeue";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Helvetica Neue"), local("HelveticaNeue-Regular"), url("../fonts/HelveticaNeue.woff2") format("woff2"), url("../fonts/HelveticaNeue.woff") format("woff");
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
 h6, p, blockquote, pre, a, abbr, acronym, address, big,
 cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
@@ -450,8 +457,7 @@ body {
 }
 
 .footer__top {
-  padding-top: 58px;
-  padding-bottom: 75px;
+  padding: 58px 0 75px;
 }
 
 .footer__bottom {
@@ -473,8 +479,7 @@ body {
 
 .footer__nav {
   float: left;
-  padding-top: 41px;
-  padding-bottom: 9px;
+  padding: 41px 0 9px;
 }
 
 .footer__nav li:not(:last-child) {
@@ -482,15 +487,14 @@ body {
 }
 
 .footer__nav a {
-  font-family: "HelveticaLT";
+  font-family: "HelveticaNeue";
   font-size: 12px;
   line-height: 14px;
 }
 
 .footer__subnav {
-  padding-top: 23px;
-  padding-bottom: 32px;
   float: right;
+  padding: 23px 0 32px;
 }
 
 .footer__subnav li:not(:last-child) {
@@ -515,6 +519,54 @@ body {
 .footer__logo img {
   display: block;
   width: 61px;
+}
+
+@media only screen and (max-width: 1260px) {
+
+  .footer__top {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .footer__nav {
+    float: none;
+    padding: 0 0 40px;
+  }
+
+  .footer__sm-social {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .footer__nav li,
+  .footer__nav a, .footer__subnav li,
+  .footer__subnav a {
+    display: block;
+  }
+
+  .footer__nav a, .footer__subnav a {
+    padding: 6px 0;
+  }
+
+  .footer__nav li:not(:last-child) {
+    padding: 0;
+  }
+
+  .footer__subnav {
+    float: left;
+    padding: 0;
+  }
+
+  .footer__subnav li:not(:last-child) {
+    padding: 0;
+  }
+
+  .footer__logo {
+    float: right;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

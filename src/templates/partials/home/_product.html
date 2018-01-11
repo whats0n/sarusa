@@ -1,0 +1,42 @@
+<!-- begin product -->
+<div class="product" style="background-image: url(img/product-bg.jpg);">
+	<button class="product__prev">{{mixins.icon('arrow-prev')}}</button>
+	<button class="product__next">{{mixins.icon('arrow-next')}}</button>
+	<div class="inner product__inner">
+		<div class="product__container">
+			<div class="product__row">
+				<div class="product__col product__content">
+					<h2 class="title-md product__title">We are <br><span>creative</span></h2>
+					<h2 class="title-md product__subtitle">B6C</h2>
+					<div class="product__text">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+					</div>
+				</div>
+				<div class="product__col product__img">
+					<div class="product__item">
+						{% for item in [
+							{
+								top: '9.5',
+								left: '10.5'
+							},
+							{
+								top: '10',
+								left: '51'
+							},
+							{
+								top: '47',
+								left: '45'
+							}
+						] %}
+							<div class="product__info" style="top: {{item.top}}%; left: {{item.left}}%;">
+								<button class="product__plus"></button>
+							</div>
+						{% endfor %}
+						<img src="img/product-item.png" alt="product">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end product -->

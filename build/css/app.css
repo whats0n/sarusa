@@ -581,8 +581,22 @@ body {
 }
 
 .topic__bottom {
-  padding-top: 143px;
+  margin-top: 143px;
   text-align: center;
+}
+
+.topic__name {
+  padding: 29px;
+  text-align: center;
+  min-width: 626px;
+  font-family: "Knockout";
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  border: 1px solid;
+  vertical-align: top;
+  display: inline-block;
 }
 
 .topic__footer {
@@ -1300,16 +1314,6 @@ body {
 .btn_red-bord .btn__text {
   position: relative;
   z-index: 1;
-}
-
-.btn_lg {
-  padding: 29px;
-  min-width: 626px;
-  font-family: "Knockout";
-  font-size: 70px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.03em;
 }
 
 .btn-open-nav {

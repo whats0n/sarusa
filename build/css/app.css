@@ -237,6 +237,18 @@ html {
   box-sizing: inherit;
 }
 
+.icon-arrow-next {
+  width: 1.28em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.icon-arrow-prev {
+  width: 1.28em;
+  height: 1em;
+  fill: currentColor;
+}
+
 .icon-facebook {
   width: 0.53em;
   height: 1em;
@@ -420,6 +432,179 @@ body {
   transform: scaleX(0);
   border-radius: 2px;
   background-color: #F92251;
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.product__inner {
+  padding-top: 139px;
+  padding-bottom: 314px;
+}
+
+.product__container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.product__row {
+  display: table-row;
+}
+
+.product__content {
+  width: 44%;
+}
+
+.product__img {
+  width: 56%;
+}
+
+.product__col {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.product__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+}
+
+.product__item:before {
+  content: '';
+  position: absolute;
+  top: -21%;
+  right: -15%;
+  padding-bottom: 87%;
+  width: 87%;
+  height: 0;
+  background: url(../img/product-circles.png) no-repeat center center;
+  background-size: contain;
+}
+
+.product__item img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 100%;
+}
+
+.product__title, .product__subtitle {
+  color: #fff;
+}
+
+.product__title {
+  margin-bottom: 28px;
+}
+
+.product__subtitle {
+  margin-bottom: 13px;
+}
+
+.product__text {
+  color: #fff;
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 1px;
+}
+
+.product__text:after {
+  content: '';
+  display: block;
+  margin-top: 39px;
+  border-radius: 2px;
+  width: 135px;
+  height: 2px;
+  background: #F92251;
+}
+
+.product__info {
+  position: absolute;
+  z-index: 3;
+  margin: -10px 0 0 -10px;
+}
+
+.product__plus {
+  position: relative;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: #F92251;
+}
+
+.product__plus:before, .product__plus:after {
+  content: '';
+  position: absolute;
+}
+
+.product__plus:before {
+  top: 4px;
+  left: 50%;
+  bottom: 4px;
+  margin-left: -1px;
+  border-left: 2px solid #fff;
+}
+
+.product__plus:after {
+  left: 4px;
+  right: 4px;
+  top: 50%;
+  margin-top: -1px;
+  border-top: 2px solid #fff;
+}
+
+.product__prev, .product__next {
+  position: absolute;
+  z-index: 10;
+  top: 38.65%;
+  margin-top: -25px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: none;
+  text-align: center;
+  font-size: 0;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.product__prev:before, .product__next:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.no-touch .product__prev:hover, .no-touch .product__next:hover {
+  border-color: #fff;
+  background: #fff;
+}
+
+.product__prev .icon, .product__next .icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: #4E4E4E;
+  font-size: 20px;
+}
+
+.product__prev {
+  left: 27px;
+}
+
+.product__next {
+  right: 27px;
 }
 
 .news {
@@ -906,6 +1091,41 @@ body {
     width: 100%;
   }
 
+  .product {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .product__inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .product__container {
+    display: block;
+  }
+
+  .product__row {
+    display: block;
+  }
+
+  .product__content {
+    padding-bottom: 30px;
+  }
+
+  .product__img {
+    text-align: center;
+  }
+
+  .product__col {
+    display: block;
+    width: 100%;
+  }
+
+  .product__prev, .product__next {
+    display: none;
+  }
+
   .news__inner {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -921,6 +1141,10 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+
+  .title-md {
+    font-size: 56px;
+  }
 
   .col {
     padding: 15px;

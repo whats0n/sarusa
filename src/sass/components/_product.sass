@@ -1,0 +1,132 @@
+.product
+	position: relative
+	overflow: hidden
+	padding-left: 80px
+	padding-right: 80px
+	+cover
+	+md 
+		padding-left: 0
+		padding-right: 0
+	&__inner
+		padding-top: 139px
+		padding-bottom: 314px
+		+md 
+			padding-top: 50px
+			padding-bottom: 50px
+	&__container
+		display: table
+		table-layout: fixed
+		width: 100%
+		+md 
+			display: block
+	&__row 
+		display: table-row
+		+md 
+			display: block
+	&__content 
+		width: 44%
+		+md 
+			padding-bottom: 30px
+	&__img 
+		width: 56%
+		+md
+			text-align: center
+	&__col
+		display: table-cell
+		vertical-align: middle
+		+md 
+			display: block
+			width: 100%
+	&__item
+		position: relative
+		display: inline-block
+		vertical-align: top
+		font-size: 0
+		&:before
+			content: ''
+			position: absolute
+			top: -21%
+			right: -15%
+			padding-bottom: 87%
+			width: 87%
+			height: 0
+			background: url(../img/product-circles.png) no-repeat center center
+			background-size: contain
+		img 
+			position: relative
+			z-index: 1
+			display: block
+			max-width: 100%
+	&__title,
+	&__subtitle
+		color: $white
+	&__title
+		margin-bottom: 28px
+	&__subtitle
+		margin-bottom: 13px
+	&__text
+		color: $white
+		font-family: $roboto_condensed
+		+f(16px, 300, 21px)
+		letter-spacing: 1px
+		&:after
+			content: ''
+			display: block
+			margin-top: 39px
+			border-radius: 2px
+			width: 135px
+			height: 2px
+			background: $radicalRed
+	&__info 
+		position: absolute
+		z-index: 3
+		margin: -10px 0 0 -10px
+	&__plus
+		position: relative
+		border-radius: 50%
+		width: 20px
+		height: 20px
+		background: $radicalRed
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+		&:before
+			top: 4px
+			left: 50%
+			bottom: 4px
+			margin-left: -1px
+			border-left: 2px solid $white
+		&:after
+			left: 4px
+			right: 4px
+			top: 50%
+			margin-top: -1px
+			border-top: 2px solid $white
+	&__prev,
+	&__next
+		position: absolute
+		z-index: 10
+		top: 38.65%
+		margin-top: -25px
+		border: 1px solid rgba($white, 0.5)
+		border-radius: 50%
+		width: 50px
+		height: 50px
+		background: none
+		+vertical
+		transition: border-color 0.25s, background 0.25s
+		+hover
+			border-color: $white
+			background: $white
+		+md 
+			display: none
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: #4E4E4E
+			font-size: 20px
+	&__prev
+		left: 27px
+	&__next 
+		right: 27px

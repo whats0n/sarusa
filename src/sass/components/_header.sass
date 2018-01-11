@@ -3,40 +3,76 @@
 	top: 0
 	left: 0
 	right: 0
-	z-index: 10
+	z-index: 100
 	height: 166px
+	+md
+		height: 60px
 	&__inner
 		padding: 0 32px
 		max-width: 1600px
+		+md
+			padding: 0 15px
 	&__logo
 		float: left
 		margin: 20px 0 0 156px
+		+lg
+			margin-left: 0
 	&__btn
 		float: right
+		margin: 15px -10px 0 0
 		display: none
-	&__nav
-		float: right
-		margin-top: 110px
+		+md
+			display: block
 
 .logo
 	vertical-align: top
 	display: inline-block
 	img
 		display: block
+		+lg
+			height: 80px
+			width: auto
+		+md
+			height: 40px
+			width: auto
 
 .nav
+	float: right
+	margin-top: 110px
 	font-weight: 400 
+	+lg
+		margin-top: 80px 
+	+md
+		position: absolute
+		top: 0
+		right: -250px
+		margin-top: 0
+		padding: 80px 0 20px
+		width: 250px
+		transition: transform .3s ease-in-out
+		overflow-y: auto
+		background-color: $white 
+		&.is-open
+			transform: translateX(-250px)
 	&__item
 		vertical-align: top
 		display: inline-block
+		+md
+			display: block
 		&:not(:first-child)
 			margin-left: 39px
+			+md
+				margin: 15px 0 0
 	&__link
 		position: relative
 		line-height: 1
 		color: $white 
 		padding-bottom: 15px
 		display: block
+		+md
+			padding-left: 15px
+			padding-right: 15px
+			color: $black 
 		.is-active &
 			font-weight: 700 
 			&:before

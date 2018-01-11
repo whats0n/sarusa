@@ -23,6 +23,11 @@
             </g>
         </g>
     </g>
+</symbol><symbol id="icon-next" viewBox="0 0 8 14">
+    <title>
+        Shape
+    </title>
+    <path d="M8 6.865a.54.54 0 0 1-.156.406c-.025.025-.062.018-.09.036l-6.823 6.26a.546.546 0 0 1-.77-.772l6.467-5.932L.16.93A.544.544 0 1 1 .93.16l6.822 6.256c.029.02.067.013.092.038a.538.538 0 0 1 .155.41z" fill-rule="evenodd"/>
 </symbol><symbol id="icon-pinterest" viewBox="0 0 14 18">
     <title>
         pininterest

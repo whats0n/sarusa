@@ -1,0 +1,65 @@
+<!-- begin news -->
+<div class="news">
+	<div class="inner news__inner">
+		<div class="news__bg-title">News</div>
+		<div class="row">
+			<div class="col col-50 col_md-100">
+				<h2 class="title-md news__title">Our <br><span>News</span></h2>
+				<div class="news__items">
+					{% for item in [
+						{
+							date: '12 MAY 2016',
+							content: "Success isn't just about what you accomplish in your life; it's about what you inspire others to do."
+						},
+						{
+							date: '21 MAY 2016',
+							content: 'The only limit to our realization of tomorrow will be our doubts of today.'
+						},
+						{
+							date: '16 MAY 2016',
+							content: "Many of life's failures are people who did not realize how close they were to success when they gave up."
+						},
+						{
+							date: '12 MAY 2016',
+							content: "Success isn't just about what you accomplish in your life; it's about what you inspire others to do."
+						}
+					] %}
+					    <a href="#" class="news-item">
+					    	<div class="news-item__bg" style="background-image: url({{item.img or 'img/news-item.jpg'}});"></div>
+					    	<div class="news-item__container">
+					    		<div class="news-item__date">{{item.date}}</div>
+					    		<div class="news-item__content">{{item.content}}</div>
+					    		<div class="news-item__link">
+					    			<span>Learn more</span>
+					    			{{mixins.icon('next')}}
+					    		</div>
+					    	</div>
+					    </a>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col col-50 col_md-100">
+				<div class="news__banners">
+					{% for item in [
+						{
+							img: 'img/news-banner-1.jpg',
+							title: 'About us'
+						},
+						{
+							img: 'img/news-banner-2.jpg',
+							title: 'Our catalogue'
+						}
+					] %}	
+						<a href="#" class="news-banner news__banner" style="background-image: url({{item.img}});">
+							<div class="news-banner__title">{{item.title}}</div>
+						</a> 
+					{% endfor %}
+				</div>
+				<div class="news__video">
+					<iframe src="https://www.youtube-nocookie.com/embed/6ZfuNTqbHE8?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end news -->

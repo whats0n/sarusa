@@ -1,7 +1,6 @@
 .topic
 	position: relative
 	color: $white 
-	+vertical
 	background-position: 50% 50% 
 	background-size: cover
 	background-repeat: no-repeat
@@ -15,6 +14,19 @@
 		z-index: 1
 		pointer-events: none
 		background-image: linear-gradient(269deg, rgba(49,71,105,0.00) 0%, #000000 100%)
+	&__inner
+		position: relative
+		z-index: 2
+		margin: 0 auto
+		padding: 0 32px
+		max-width: 1600px
+		+md
+			padding: 0 15px
+	&__wrap
+		padding: 176px 0 199px
+	&__bottom
+		padding-top: 143px
+		text-align: center
 	&__footer
 		position: absolute
 		left: 0
@@ -44,6 +56,7 @@
 		z-index: 2
 		padding: 0 46px
 		max-width: 1600px
+		font-size: 0
 		width: 100%
 		text-align: right
 		transform: translate(-50%, -50%)

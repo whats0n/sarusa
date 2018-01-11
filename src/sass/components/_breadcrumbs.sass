@@ -1,0 +1,27 @@
+.breadcrumbs
+	margin-left: 156px
+	+lg
+		margin-left: 0
+	&__item
+		position: relative
+		vertical-align: top
+		display: inline-block
+		&:not(:first-child)
+			padding-left: 28px
+			&:before
+				position: absolute
+				content: "" 
+				top: 5px
+				left: 9px
+				width: 8px
+				height: 14px
+				background: url(../img/arr.svg) no-repeat 0 0 
+	a
+		color: $white
+		font-weight: 400 
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+		+hover
+			border-color: $white 
+	span
+		font-weight: 300 

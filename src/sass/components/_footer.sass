@@ -1,0 +1,75 @@
+.footer
+	color: $white
+	background: $black
+	a
+		color: inherit
+	&__top,
+	&__bottom
+		+clr
+	&__top
+		padding: 58px 0 75px
+		+lg 
+			padding: 50px 0
+			text-align: center
+	&__bottom
+		padding-top: 29px
+		padding-bottom: 30px
+		border-top: 1px solid rgba($white, 0.1)
+	&__nav,
+	&__subnav
+		font-size: 0
+		li,
+		a 
+			display: inline-block
+			vertical-align: top
+			+sm
+				display: block
+		a 
+			transition: color 0.25s;
+			+sm 
+				padding: 6px 0
+			+hover
+				color: $radicalRed
+	&__nav
+		float: left
+		padding: 41px 0 9px
+		+lg
+			float: none
+			padding: 0 0 40px
+		li 
+			&:not(:last-child)
+				padding-right: 32px
+				+sm
+					padding: 0
+		a
+			font-family: $helvetica_neue
+			+f(12px, null, 14px)
+	&__subnav
+		float: right
+		padding: 23px 0 32px
+		+sm 
+			float: left
+			padding: 0
+		li 
+			&:not(:last-child)
+				padding-right: 98px
+				+lg 
+					padding-right: 60px
+				+sm
+					padding: 0
+		a
+			font-family: $helvetica_lt
+			+f(11px, null, 12px)
+			letter-spacing: 2.2px
+	&__sm-social
+		float: right
+		+lg 
+			float: none
+			margin: 0 auto
+	&__logo
+		float: left
+		+sm 
+			float: right
+		img 
+			display: block
+			width: 61px

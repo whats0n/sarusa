@@ -1,0 +1,35 @@
+.inner
+	position: relative
+	padding-left: 15px
+	padding-right: 15px
+	margin: 0 auto
+	max-width: 1238px
+	+clr
+
+.row
+	margin: 0 -16px
+	+clr
+	+lg 
+		margin: 0 -15px
+
+$cols: 50 100
+
+.col
+	float: left
+	padding: 16px
+	width: 100%
+	+sm 
+		padding: 15px
+	@each $i in $cols
+		&-#{$i}
+			width: $i + %
+	&_md
+		@each $i in $cols
+			&-#{$i}
+				+md
+					width: $i + %
+	&_sm
+		@each $i in $cols
+			&-#{$i}
+				+sm
+					width: $i + %

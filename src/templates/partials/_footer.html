@@ -1,0 +1,57 @@
+<!-- begin footer -->
+<footer class="footer">
+	<div class="inner footer__inner">
+		<div class="footer__top">
+			<nav class="footer__nav">
+				<ul>
+					{% for item in [
+						'HOME',
+						'PRODUCTS',
+						'SALES',
+						'CUSTOMER',
+						'SUPPORT',
+						'NEWS',
+						'CONTACT',
+						'ABOUT SAR USA'
+					] %}
+						<li>
+							<a href="#">{{item}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+			<div class="sm-social footer__sm-social">
+				<div class="sm-social__label">Follow us</div>
+				<div class="sm-social__items">
+					{% for item in [
+						'facebook',
+						'twitter',
+						'linkedin',
+						'pinterest'
+					] %}
+						<a href="#" class="sm-social__item">{{mixins.icon(item)}}</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<nav class="footer__subnav">
+				<ul>
+					{% for item in [
+						'PRIVATE POLICY',
+						'TERMS & CONDITIONS',
+						'COPYRIGHT NOTIFICATIONS'
+					] %}
+						<li>
+							<a href="#">{{item}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+			<a href="#" class="footer__logo">
+				<img src="img/logo-red.svg" alt="SARUSA">
+			</a>
+		</div>
+	</div>
+</footer>
+<!-- end footer -->

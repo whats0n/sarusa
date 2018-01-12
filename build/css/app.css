@@ -1434,7 +1434,7 @@ body {
 .breadcrumbs__item:not(:first-child):before {
   position: absolute;
   content: "";
-  top: 5px;
+  top: 3px;
   left: 9px;
   width: 8px;
   height: 14px;

@@ -1,12 +1,15 @@
 ---
 title: Index page
-headerClass: border
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-
+	
+	{% set headerClass = 'cover' %}
+	{% set headerBG = 'img/header-bg.jpg' %}
 	{% include "partials/_header.html" %}
+	{% include 'partials/productDetail/_details.html' %}
+	{% include 'partials/productDetail/_features.html' %}
 	{% include "partials/_boxes.html" %}
 	{% include "partials/_footer.html" %}
 

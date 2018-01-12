@@ -1,0 +1,205 @@
+.details
+	position: relative
+	color: $white
+	&__slide
+		position: relative
+		padding-top: 225px
+		padding-bottom: 195px
+		// padding-bottom: 156px
+		background: #272e3b
+		+lg 
+			padding-top: 50px
+			padding-bottom: 50px
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 195px
+			background: $white
+			+lg 
+				display: none
+	&__triangle
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		overflow: hidden
+		text-align: right
+		+lg 
+			display: none
+		&-in
+			position: relative
+			display: inline-block
+			vertical-align: top
+		&_green
+			[data-triangle]
+				border-right-color: #4A4A4A !important
+				border-bottom-color: #4A4A4A !important
+	&__decor
+		position: absolute
+		top: 100px
+		left: 357px
+		width: 894px
+		height: 759px
+	[data-triangle="xl"]
+		display: block
+		+arr(1600, 1152, $radicalRed, br)
+	[data-triangle="lg"]
+		position: absolute
+		right: 0
+		bottom: 0
+		+arr(894, 644, $radicalRed, br)
+	[data-triangle="md"]
+		position: absolute
+		left: 311px
+		+arr(146, 115, $radicalRed, br)
+	[data-triangle="sm"]
+		position: absolute
+		top: 31px
+		right: 327px
+		+arr(29, 23, $radicalRed, br)
+	[data-triangle="xs"]
+		position: absolute
+		top: 0
+		left: 286px
+		+arr(18, 16, $radicalRed, br)
+	&__row
+		position: relative
+		z-index: 2
+		padding: 0 32px
+		margin: 0 auto
+		max-width: 1600px
+		+md
+			padding: 0 15px
+	&__topper
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 3
+		padding-top: 15px
+		padding-bottom: 13px
+		border-bottom: 1px solid rgba($white, 0.25)
+	&__container
+		position: relative
+		z-index: 2
+	&__item 
+		margin-left: 38px
+		margin-right: -64px
+		font-size: 0
+		+xl 
+			margin: 0
+		+lg
+			text-align: center
+		img
+			display: inline-block
+			vertical-align: top
+			max-width: 100%
+	&__title,
+	&__subtitle
+		padding: 15px 0
+		color: $white
+	&__subtitle
+		position: relative
+		float: right
+		padding-bottom: 29px
+		+xs 
+			float: left
+		&:after
+			content: ''
+			position: absolute
+			left: 5px
+			right: 6px
+			bottom: 0
+			border-top: 1px solid $white
+			+xs 
+				left: 0
+				right: 0
+	&__info
+		margin: 0 0 75px -50px
+		+clr
+		+xl 
+			margin-left: 0
+		+lg 
+			margin-bottom: 30px
+	&__list
+		float: left
+		width: 140px
+		opacity: 0.7
+		font-family: $roboto_condensed
+		+f(16px, 400, 55px)
+		letter-spacing: 1.1px
+		text-align: right
+		+xs 
+			float: none
+			width: auto
+			text-align: left
+		li 
+			+xs 
+				display: inline-block
+				vertical-align: top
+			&:not(:last-child)
+				+xs 
+					padding-right: 20px
+	&__description
+		position: relative
+		overflow: hidden
+		padding: 16px 20px 0 32px
+		font-family: $roboto_condensed
+		+f(16px, 300, 21px)
+		letter-spacing: 1px
+		+xs 
+			padding: 16px 0 0 
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 32px
+			border-top: 1px solid $radicalRed
+			width: 88px
+			+xs 
+				display: none
+	&__btns 
+		font-size: 0
+		text-align: right
+		+md 
+			text-align: center
+		.sm-btn 
+			margin: 16px 0 0 16px
+			+xs 
+				width: 100%
+				margin-left: 0
+	&__footer
+		padding-top: 17px
+		margin-right: -22px
+		text-align: right
+		+xl 
+			margin: 0
+	&__meta
+		clear: both
+		padding-top: 20px
+		padding-bottom: 28px
+		font-size: 0
+		li 
+			display: inline-block
+			vertical-align: top
+			padding-top: 21px
+			font-family: $roboto_condensed
+			+f(20px, null, 24px)
+			text-align: left
+			+xs 
+				width: 50%
+				+f(16px, null, 18px)
+			&:not(:first-child)
+				padding-left: 72px
+				+xs 
+					padding-left: 0
+		strong,
+		span 
+			display: block
+		span 
+			font-weight: 300

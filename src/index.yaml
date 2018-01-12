@@ -3,3 +3,4 @@ ProjectTitle: sarusa
 PageList:
 - file: home.html
 - file: product-detail.html
+- file: products-list.html

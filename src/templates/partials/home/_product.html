@@ -13,7 +13,7 @@
 					</div>
 				</div>
 				<div class="product__col product__img">
-					<div class="product__item">
+					<div class="hints product__item">
 						{% for item in [
 							{
 								top: '9.5',
@@ -28,8 +28,8 @@
 								left: '45'
 							}
 						] %}
-							<div class="product__info" style="top: {{item.top}}%; left: {{item.left}}%;">
-								<button class="product__plus"></button>
+							<div class="hint" style="top: {{item.top}}%; left: {{item.left}}%;">
+								<button class="hint__btn"></button>
 							</div>
 						{% endfor %}
 						<img src="img/product-item.png" alt="product">

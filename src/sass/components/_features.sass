@@ -1,0 +1,43 @@
+.features
+	position: relative
+	+lg 
+		background: $lightGray
+	&:before
+		content: ''
+		position: absolute
+		top: 578px
+		left: 0
+		right: 0
+		bottom: 0
+		background: $lightGray
+		+lg 
+			display: none
+	&__inner
+		padding-top: 58px
+		padding-bottom: 37px
+	&__title 
+		padding: 15px 0
+		margin-bottom: 33px
+		span 
+			display: inline-block
+			vertical-align: top
+			&:after 
+				content: ''
+				display: block
+				margin-top: 13px
+				border-top: 1px solid $radicalRed
+	&__item
+		margin-bottom: 120px
+		font-size: 0
+		text-align: center
+		+md 
+			margin-bottom: 60px
+		&-in 
+			display: inline-block
+			vertical-align: top
+		img 
+			max-width: 100%
+	&__footer
+		text-align: center
+	&__video
+		margin-bottom: 36px

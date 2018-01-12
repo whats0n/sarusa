@@ -1,0 +1,9 @@
+<ul class="breadcrumbs {{breadcrumbsClassList}}">
+	{% for item in breadcrumbs or ["HOME", "PRODUCTS", "PISTOLS"] %}
+		{% if loop.last %}
+			<li class="breadcrumbs__item">{{ item }}</li>
+		{% else %}
+			<li class="breadcrumbs__item"><a href="#">{{ item }}</a></li>
+		{% endif %}
+	{% endfor %}
+</ul>

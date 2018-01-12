@@ -1,0 +1,36 @@
+<!-- begin features -->
+<div class="features">
+	<div class="inner features__inner">
+		<h2 class="title-md features__title"><span>FEATURES</span></h2>
+		<div class="features__item">
+			<div class="hints features__item-in">
+				{% for item in [
+					{
+						top: '31',
+						left: '19'
+					},
+					{
+						top: '10',
+						left: '62'
+					},
+					{
+						top: '46',
+						left: '56.5'
+					}
+				] %}
+					<div class="hint" style="top: {{item.top}}%; left: {{item.left}}%;">
+						<button class="hint__btn"></button>
+					</div>
+				{% endfor %}
+				<img src="img/product-item-lg.png" alt="product item">
+			</div>
+		</div>
+		<div class="video features__video">
+			<iframe src="https://www.youtube-nocookie.com/embed/6ZfuNTqbHE8?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<div class="features__footer">
+			<a href="#" class="btn-rad">View All Videos</a>
+		</div>
+	</div>
+</div>
+<!-- end features -->

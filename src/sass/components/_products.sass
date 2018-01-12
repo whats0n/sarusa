@@ -13,18 +13,28 @@
 		border-bottom: 1px solid #D8D8D8 
 		border-left: 1px solid #D8D8D8 
 		text-align: center
+		+md
+			flex: 0 0 50%
+		+sm
+			flex: 0 0 100%
 		&:first-child,
 		&:nth-child(3n+4)
 			border-left: 0
+			+md
+				border-left: 1px solid #D8D8D8 
 	&__in
 		flex: none
 		max-width: 100%
-	&__img
+	&__img-out
 		min-height: 252px
 		line-height: 252px
+	&__img
+		vertical-align: middle
+		max-width: 313px
+		display: inline-block
 		img
-			max-width: 313px
-			vertical-align: middle
+			width: 100%
+			display: block
 	&__name
 		margin-top: 30px
 	&__description
@@ -35,3 +45,7 @@
 	&__footer
 		padding: 65px 0 92px
 		text-align: center
+		+md
+			padding: 50px 0 60px
+		+sm
+			padding: 30px 0 40px

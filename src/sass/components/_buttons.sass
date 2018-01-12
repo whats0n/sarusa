@@ -97,9 +97,24 @@
 	text-align: center
 	vertical-align: top
 	border-radius: 100px
-	transition: box-shadow .3s ease-in-out
+	transition: box-shadow .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out
 	box-shadow: 0 8px 20px 0 rgba(224,224,224,0.50)
 	background: $white
 	display: inline-block
 	+hover
 		box-shadow: 0 9px 28px 0 rgba(224,224,224,1)
+	&_md
+		padding: 14px 20px
+		min-width: 212px 
+	&_red
+		color: $white 
+		border: 1px solid $torchRed  
+		background-color: $torchRed 
+		+hover
+			color: $black 
+			background-color: transparent
+			box-shadow: none
+	&_up
+		text-transform: uppercase
+	&_noChad
+		box-shadow: none

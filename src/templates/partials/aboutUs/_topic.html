@@ -1,0 +1,21 @@
+<!-- begin topic-slider -->
+<div class="topic" style="background-image: url(./img/products-list-about-us.jpg);">
+	<div class="topic__wrap">
+		<div class="topic__inner">
+			<ul class="breadcrumbs">
+				{% set links = ["HOME", "PRODUCTS", "PISTOLS"] %}
+				{% for text in links %}
+					{% if loop.last %}
+						<li class="breadcrumbs__item">{{ text }}</li>
+					{% else %}
+						<li class="breadcrumbs__item"><a href="#">{{ text }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+			<div class="topic__bottom">
+				<div class="topic__name">ABOUT SAR USA</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end topic-slider -->

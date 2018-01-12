@@ -1526,6 +1526,32 @@ body {
   text-align: center;
 }
 
+.content {
+  padding: 150px 0 160px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.72px;
+  background-color: #FF004B;
+}
+
+.content__inner {
+  max-width: 1179px;
+}
+
+.content p:not(:first-child) {
+  margin-top: 25px;
+}
+
+.photos img {
+  width: 100%;
+  display: block;
+}
+
+.gray-section {
+  padding: 148px 0 152px;
+  background-color: #272E3B;
+}
+
 .footer {
   color: #fff;
   background: #000;
@@ -1831,6 +1857,10 @@ body {
   .products__footer {
     padding: 50px 0 60px;
   }
+
+  .content {
+    padding: 100px 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1898,6 +1928,10 @@ body {
 
   .products__footer {
     padding: 30px 0 40px;
+  }
+
+  .content {
+    padding: 50px 0;
   }
 
   .footer__nav li,

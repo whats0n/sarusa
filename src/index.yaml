@@ -4,3 +4,4 @@ PageList:
 - file: home.html
 - file: products-list.html
 - file: about-us.html
+- file: form.html

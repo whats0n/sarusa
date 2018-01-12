@@ -2055,6 +2055,39 @@ body {
   resize: none;
 }
 
+[data-tabs] [data-tabs-control] {
+  cursor: pointer;
+}
+
+[data-tabs] [data-tabs-control][disabled], [data-tabs] [data-tabs-control].is-disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+[data-tabs] [data-tabs-wrapper] {
+  position: relative;
+}
+
+[data-tabs] [data-tabs-container] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+[data-tabs] [data-tabs-container].is-open {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
 .footer {
   color: #fff;
   background: #000;

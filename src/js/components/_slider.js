@@ -1,5 +1,3 @@
-import slick from 'slick-carousel';
-
 ;(() => {
   const slider = $('.js-topic-slider');
   slider.slick({

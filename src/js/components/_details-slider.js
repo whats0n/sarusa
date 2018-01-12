@@ -1,5 +1,3 @@
-import slick from 'slick-carousel';
-
 ;(() => {
   const slider = $('.js-details-slider');
   slider.slick({

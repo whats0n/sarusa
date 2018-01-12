@@ -1,5 +1,8 @@
 import { TOUCH } from './_utils';
 import { BODY } from './_constants';
+
+import 'slick-carousel';
+
 import './_components';
 import svg4everybody from 'svg4everybody';
 

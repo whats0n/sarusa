@@ -29,7 +29,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="details__container">
+					<div class="details__container" data-tabs>
 						<div class="inner details__inner">
 							<div class="row">
 								<div class="col col-50 col_md-100">
@@ -38,11 +38,17 @@
 										<div class="details__info">
 											<ul class="details__list">
 												{% for item in [ 'B6C BLACK', 'B6C STAINLESS', 'B6 FDO', 'B6OD' ] %}
-													<li>{{item}}</li>
+													<li data-tabs-control="tab-{{loop.index}}">{{item}}</li>
 												{% endfor %}
 											</ul>
 											<div class="details__description">
-												<p>The B6 series is truly the foundation of the SAR USA line of polymer frame pistols. Available in three calibers, blue steel or stainless, standard or compact, with a choice of polymer colors, the B6 fits any application. Long a favorite of security and law enforcement Worldwide, the B6 is a no nonsense rock solid side arm of proven dependability. With an integrated grip spur and three back strap inserts to customize the ergonomic fit for the individual’s hand, the B6 is quick pointing and comfortable. So, whether you’re looking for a 9mm for home protection or a compact carry gun there’s a value priced B6 to fit the bill.</p>
+												<div data-tabs-wrapper>
+													{% for description in range(0,4) %}
+														<div data-tabs-container="tab-{{loop.index}}">
+															<p>{% if not loop.first %}{{loop.index}} {% endif %}The B6 series is truly the foundation of the SAR USA line of polymer frame pistols. Available in three calibers, blue steel or stainless, standard or compact, with a choice of polymer colors, the B6 fits any application. Long a favorite of security and law enforcement Worldwide, the B6 is a no nonsense rock solid side arm of proven dependability. With an integrated grip spur and three back strap inserts to customize the ergonomic fit for the individual’s hand, the B6 is quick pointing and comfortable. So, whether you’re looking for a 9mm for home protection or a compact carry gun there’s a value priced B6 to fit the bill.</p>
+														</div>
+													{% endfor %}
+												</div>
 											</div>
 										</div>
 										<div class="details__btns">
@@ -52,28 +58,39 @@
 									</div>
 								</div>
 								<div class="col col-50 col_md-100">
-									<div class="details__item">
-										<img src="{{item.img}}" alt="product item">
+									<div data-tabs-wrapper>
+										{% for img in range(0,4) %}
+											<div class="details__item" data-tabs-container="tab-{{loop.index}}">
+												<img src="{{item.img}}" alt="product item">
+											</div>
+										{% endfor %}
 									</div>
 								</div>
 							</div>
 							<div class="details__footer">
 								<h2 class="title-md details__subtitle">Specs</h2>
-								<ul class="details__meta">
-									{% for item in [
-										{ label: 'MODEL', value: 'B6C' },
-										{ label: 'CALIBER', value: '9mm' },
-										{ label: 'ACTION', value: 'SA / DA' },
-										{ label: 'CAPACITY', value: '13+1' },
-										{ label: 'BARREL LENGTH', value: '3.8"' },
-										{ label: 'OVERALL LENGTH', value: '7.4"' }
-									] %}
-										<li>
-											<strong>{{item.label}}</strong>
-											<span>{{item.value}}</span>
-										</li>
-									{% endfor %}
-								</ul>
+								<div class="details__meta">
+									<div data-tabs-wrapper>
+										{% for spec in range(0,4) %}
+											{% set parentIndex = loop.index %}
+											<ul data-tabs-container="tab-{{loop.index}}">
+												{% for item in [
+													{ label: 'MODEL', value: 'B6C' },
+													{ label: 'CALIBER', value: '9mm' },
+													{ label: 'ACTION', value: 'SA / DA' },
+													{ label: 'CAPACITY', value: '13+1' },
+													{ label: 'BARREL LENGTH', value: '3.8"' },
+													{ label: 'OVERALL LENGTH', value: '7.4"' }
+												] %}
+													<li>
+														<strong>{{item.label}}{% if parentIndex != 1 %} {{parentIndex}}{% endif %}</strong>
+														<span>{{item.value}}</span>
+													</li>
+												{% endfor %}
+											</ul>
+										{% endfor %}
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -5,3 +5,4 @@ PageList:
 - file: product-detail.html
 - file: products-list.html
 - file: about-us.html
+- file: form.html

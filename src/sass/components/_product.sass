@@ -94,7 +94,7 @@
 			border-color: $white
 			background: $white
 		+md 
-			display: none
+			display: none !important
 		.icon
 			display: inline-block
 			vertical-align: middle
@@ -104,3 +104,43 @@
 		left: 27px
 	&__next 
 		right: 27px
+	.slick-dots
+		display: none
+		font-size: 0
+		text-align: center
+		+md 
+			display: block
+		li 
+			display: inline-block
+			vertical-align: top
+			&.slick-active 
+				button 
+					&:before 
+						opacity: 1
+		button
+			position: relative
+			width: 24px
+			height: 24px
+			opacity: 0.52
+			background: none
+			transition: opacity 0.25s
+			+hover 
+				opacity: 1
+			&:before,
+			&:after 
+				content: ''
+				position: absolute
+				border-radius: 50%
+				top: 50%
+				left: 50%
+				transform: translate3d(-50%,-50%,0)
+			&:before
+				border: 1px solid $white
+				width: 16px
+				height: 16px
+				opacity: 0
+				transition: opacity 0.25s
+			&:after
+				width: 10px
+				height: 10px
+				background: $white

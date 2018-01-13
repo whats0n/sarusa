@@ -1196,7 +1196,7 @@ body {
 }
 
 .product .slick-dots {
-  display: none;
+  display: none !important;
   font-size: 0;
   text-align: center;
 }
@@ -2833,7 +2833,7 @@ body {
   }
 
   .product .slick-dots {
-    display: block;
+    display: block !important;
   }
 
   .news__inner {

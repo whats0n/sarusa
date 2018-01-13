@@ -132,6 +132,9 @@
 	+vertical
 	+xs 
 		height: 300px
+	+hover
+		.news-banner__title:after
+			transform: translateY(-10px)
 	&__title
 		display: inline-block
 		vertical-align: middle
@@ -145,4 +148,5 @@
 			content: ''
 			display: block
 			margin-top: 18px
+			transition: transform .3s
 			border-top: 1px solid $radicalRed

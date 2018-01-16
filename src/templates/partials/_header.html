@@ -17,10 +17,68 @@
 				{% set links = ["HOME", "PRODUCTS", "SALES", "CUSTOMER", "SUPPORT", "NEWS", "CONTACT", "ABOUT SAR" ] %}
 				{% for text in links %}
 					<li class="nav__item{% if loop.first %} is-active{% endif %}">
-						<a href="#" class="nav__link">{{ text }}</a>
+						<a href="#" class="nav__link"{% if text == "PRODUCTS" %} data-subnav-control="PRODUCTS"{% endif %}>{{ text }}</a>
 					</li>
 				{% endfor %}
 			</ul>
+			<div class="subnav" data-subnav-container="PRODUCTS">
+				<button class="subnav__close" data-subnav-control="PRODUCTS">Cancel{{mixins.icon('next')}}</button>
+				<div class="subnav__inner">
+					<div class="subnav__main">
+						<div class="subnav__scrollable">
+							<ul>
+								{% for item in [ 'Pistols', 'Shotguns and Competition Guns' ] %}
+									<li>
+										<a data-subnav-link="{{loop.index}}" data-subnav-level="2">{{item}}{{mixins.icon('next')}}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+					{% for item in range(0,2) %}
+						{% set first = loop.first %}
+						{% set index = loop.index %}
+						<div class="subnav__secondary" data-subnav-menu="{{loop.index}}" data-subnav-level="2">
+							<button class="subnav__close" data-subnav-close>Back{{mixins.icon('next')}}</button>
+							<div class="subnav__scrollable">
+								<ul>
+									{% for item in [ 'Semi-Automatic', 'Revolver' ] %}
+										<li>
+											<a data-subnav-link="{{index}}.{{loop.index}}" data-subnav-level="3">{% if not first %}{{index}}{% endif %}{{item}}{{mixins.icon('next')}}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					{% endfor %}
+					{% for item in range(0,2) %}
+
+						{% set index = loop.index %}
+
+						{% for item in range(0,2) %}
+							{% set first = loop.first %}
+							{% set subindex = loop.index %}
+							<div class="subnav__last" data-subnav-menu="{{index}}.{{subindex}}" data-subnav-level="3">
+								<button class="subnav__close" data-subnav-close>Back{{mixins.icon('next')}}</button>
+								<div class="subnav__scrollable">
+									{% for item in [
+										[ 'B6C', 'CM9', 'ST9', 'ST45' ],
+										[ 'ST10', 'P8L', 'P8S', 'K2-45' ],
+										[ 'K2-45C', 'K12 SPORT', '2000', 'SAR 223' ],
+										[ 'SAR 109', 'SAR 9' ]
+									] %}
+										<ul>
+											{% for item in item %}
+												<li><a href="#">{% if not first %}{{index}}.{{subindex}}{% endif %}{{item}}</a></li>
+											{% endfor %}
+										</ul>
+									{% endfor %}
+								</div>
+							</div>
+						{% endfor %}
+					{% endfor %}
+				</div>
+			</div>
 		</nav>
 		<!-- end nav -->
 	</div>

@@ -22,7 +22,7 @@
 				{% endfor %}
 			</ul>
 			<div class="subnav" data-subnav-container="PRODUCTS">
-				<button class="subnav__close" data-subnav-control="PRODUCTS">Cancel{{mixins.icon('next')}}</button>
+				<button class="subnav__close" data-subnav-close="PRODUCTS">Cancel{{mixins.icon('next')}}</button>
 				<div class="subnav__inner">
 					<div class="subnav__main">
 						<div class="subnav__scrollable">
@@ -39,7 +39,7 @@
 						{% set first = loop.first %}
 						{% set index = loop.index %}
 						<div class="subnav__secondary" data-subnav-menu="{{loop.index}}" data-subnav-level="2">
-							<button class="subnav__close" data-subnav-close>Back{{mixins.icon('next')}}</button>
+							<button class="subnav__close" data-subnav-back>Back{{mixins.icon('next')}}</button>
 							<div class="subnav__scrollable">
 								<ul>
 									{% for item in [ 'Semi-Automatic', 'Revolver' ] %}
@@ -59,7 +59,7 @@
 							{% set first = loop.first %}
 							{% set subindex = loop.index %}
 							<div class="subnav__last" data-subnav-menu="{{index}}.{{subindex}}" data-subnav-level="3">
-								<button class="subnav__close" data-subnav-close>Back{{mixins.icon('next')}}</button>
+								<button class="subnav__close" data-subnav-back>Back{{mixins.icon('next')}}</button>
 								<div class="subnav__scrollable">
 									{% for item in [
 										[ 'B6C', 'CM9', 'ST9', 'ST45' ],

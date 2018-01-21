@@ -1,4 +1,4 @@
-import {ACTIVE, OPEN, DOC} from '../_constants';
+import {ACTIVE, OPEN, DOC, widthMD} from '../_constants';
 
 ;(() => {
 
@@ -8,6 +8,7 @@ import {ACTIVE, OPEN, DOC} from '../_constants';
   };
 
   const controls = $('[data-subnav-control]');
+  const closeButtons = $('[data-subnav-close]');
   const containers = $('[data-subnav-container]');
 
   controls.each((i, control) => {
@@ -17,16 +18,54 @@ import {ACTIVE, OPEN, DOC} from '../_constants';
     const otherContainers = containers.not(`[data-subnav-container="${containerName}"]`);
     const container = containers.filter(`[data-subnav-container="${containerName}"]`);
 
-    control.click(e => {
-      e.preventDefault();
-      if (container.hasClass(OPEN)) {
+    let timer = null;
+    let active = false;
+
+    const hideOnLeave = (e) => {
+      if (window.matchMedia(`(max-width: ${widthMD}px)`).matches) return;
+      active = false;
+      timer && clearTimeout(timer);
+      timer = setTimeout(() => {
         container
           .add(('[data-subnav-menu]'))
           .removeClass(OPEN);
         $('[data-subnav-link]').removeClass(ACTIVE);
-      } else {
-        setActive(otherContainers, container, OPEN);
-      }
+      }, 300);
+    };
+
+    const showOnEnter = (e) => {
+      if (window.matchMedia(`(max-width: ${widthMD}px)`).matches) return;
+      active = true;
+      timer && clearTimeout(timer);
+      setActive(otherContainers, container, OPEN);
+    };
+
+    control
+      .click(e => {
+        e.preventDefault();
+        if (active) return;
+        if (container.hasClass(OPEN)) {
+          container
+            .add(('[data-subnav-menu]'))
+            .removeClass(OPEN);
+          $('[data-subnav-link]').removeClass(ACTIVE);
+        } else {
+          setActive(otherContainers, container, OPEN);
+        }
+      });
+
+    control
+      .add(container)
+      .mouseover(showOnEnter)
+      .mouseout(hideOnLeave);
+  });
+
+  closeButtons.each((i, button) => {
+    button = $(button);
+    const container = button.closest('[data-subnav-container]');
+    button.click(e => {
+      e.preventDefault();
+      container.removeClass(OPEN);
     });
   });
 
@@ -35,9 +74,9 @@ import {ACTIVE, OPEN, DOC} from '../_constants';
 
     const menus = nav.find('[data-subnav-menu]');
     const links = nav.find('[data-subnav-link]');
-    const closeButtons = nav.find('[data-subnav-close]');
+    const backButtons = nav.find('[data-subnav-back]');
 
-    closeButtons.each((i, button) => {
+    backButtons.each((i, button) => {
       button = $(button);
       const currentMenu = button.closest('[data-subnav-menu]');
       button.click(e => {

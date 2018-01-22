@@ -12,10 +12,10 @@
 				{% include 'partials/_breadcrumbs.html' %}
 			</div>
 		</div>
-		<div class="details__slider js-details-slider">
+		<div class="details__slider">
+			{# { img: 'img/product-item-2.png', color: 'green' } #}
 			{% for item in [
-				{ img: 'img/product-item.png' },
-				{ img: 'img/product-item-2.png', color: 'green' }
+				{ img: 'img/product-item.png' }
 			] %}
 				<div class="details__slide">
 					<div class="details__triangle{% if item.color %} details__triangle_{{item.color}}{% endif %}">
